@@ -1,0 +1,23 @@
+{
+  "name": "explodecode",
+  "version": "1.0.0",
+  "description": "explodecode wordpress theme",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-uglify": "~0.1.2",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-imagemin": "~0.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gavinblair/explodecode"
+  },
+  "author": "gavinblair <@gavinblair>",
+  "license": "BSD",
+  "gitHead": "c1422245b6dc740d032012799feef23d37d7fded"
+}
