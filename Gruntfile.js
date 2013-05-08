@@ -33,6 +33,17 @@ module.exports = function(grunt) {
           'css/<%= pkg.name %>.min.css': ['css/*.css']
         }
       }
+    },
+    imagemin: {
+      dist: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: {
+          'img/logo-med.png': 'img/logo-med.png',
+          'img/logo.png': 'img/logo.png'
+        }
+      }
     }
   });
 
@@ -40,9 +51,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   // Default task(s).
-  grunt.registerTask('default', ['jshint', 'uglify', 'cssmin']);
-  grunt.registerTask('build', ['jshint', 'uglify', 'cssmin']);
+  grunt.registerTask('default', ['jshint', 'uglify', 'imagemin', 'cssmin']);
+  grunt.registerTask('build', ['jshint', 'uglify', 'imagemin', 'cssmin']);
 
 };
