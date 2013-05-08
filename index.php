@@ -12,8 +12,9 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css">
-        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main.css">
+        <!-- <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css">
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main.css"> -->
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/explodecode.min.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -74,8 +75,9 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-        <script src="<?php bloginfo('template_url'); ?>/js/bootstrap.js"></script>
-        <script src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
+        <!-- <script src="<?php bloginfo('template_url'); ?>/js/bootstrap.js"></script>
+        <script src="<?php bloginfo('template_url'); ?>/js/main.js"></script> -->
+        <script src="<?php bloginfo('template_url'); ?>/js/explodecode.min.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
