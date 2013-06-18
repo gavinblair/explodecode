@@ -10,10 +10,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
-        <!-- <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css">
-        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main.css"> -->
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css">
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap-responsive.css">
         <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/explodecode.min.css">
     </head>
     <body>
@@ -21,38 +19,62 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <div class="container-fluid">
-            <?php
-                $menu_name = 'header-menu';
+        <div class="container" id="page">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <div class="navbar-content">
+                            <a href="#"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" class="hidden-phone" id="logo"></a>
+                            <ul class="nav pull-right">
+                                <?php
+                                    $menu_name = 'header-menu';
 
-                if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
-                    $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+                                    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+                                        $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
 
-                    $menu_items = wp_get_nav_menu_items($menu->term_id);
+                                        $menu_items = wp_get_nav_menu_items($menu->term_id);
 
-                    $c = 0;
-                    foreach ( (array) $menu_items as $key => $menu_item ) {
-                        $c++;
-                        $title = $menu_item->title;
-                        $url = $menu_item->url;
-                        if($c <= 3) {
-                            $left_menu_list .= '<a href="' . $url . '">' . $title . '</a>';
-                        } else {
-                            $right_menu_list .= '<a href="' . $url . '">' . $title . '</a>';
-                        }
-                    }
-                }
-            ?>
-            <nav>
-                <?php echo $left_menu_list; ?>
-                <h1><a href="<?php echo bloginfo('siteurl'); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" /></a></h1>
-                <?php echo $right_menu_list; ?>
-            </nav>
-            <div class="container content">
+                                        $c = 0;
+                                        foreach ( (array) $menu_items as $key => $menu_item ) {
+                                            $c++;
+                                            $title = $menu_item->title;
+                                            $url = $menu_item->url;
+                                            if($c <= 3) {
+                                                $left_menu_list .= '<a href="' . $url . '">' . $title . '</a>';
+                                            } else {
+                                                $right_menu_list .= '<a href="' . $url . '">' . $title . '</a>';
+                                            }
+                                        }
+                                    }
+                                ?>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                    <div class="row">
-                        <h2><?php the_title(); ?></h2>
+                    <div class="row article">
+                        <div class="span2 offset1">
+                            <p>
+                                <img src="http://i.imgur.com/byDYh6P.png">
+                                <br>
+                                <strong><?php the_author(); ?></strong>
+                                <br>
+                                <small>
+                                  <em>Explode Code</em> 
+                                </small>
+                            </p>
+                        </div>
+                        <div class="span8">
+                            <h2><?php the_title(); ?></h2>
+
+
+
+
+
+                            
+
                     </div>
                     <div class="row">
                         <div class="span8 offset2">

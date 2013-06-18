@@ -1,0 +1,114 @@
+body {
+  background: #F03F37;
+}
+#logo {
+  margin-top: 7px;
+}
+p{
+  padding: 1em;
+}
+p.lead {
+  margin-bottom: 0;
+}
+#page {
+  background: #fff;
+  box-shadow: 0px 0px 30px #C2332C;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.navbar {
+  margin-bottom: 0;
+}
+.navbar-inner {
+  border: none;
+  background: #000;
+  border-radius: 0;
+}
+.navbar-inner .brand, .navbar-inner .nav li a, .navbar-inner .nav li a:hover {
+  color: #fff;
+  text-shadow: none;
+  font-weight: bold;
+  font-size: .85em;
+}
+.second .navbar-inner .brand, .second .navbar-inner .nav li a, .second .navbar-inner .nav li a:hover {
+  color: #000;
+}
+.second.navbar .navbar-inner{
+  background: #f0f0f0;
+  border-top: 2px solid #cdcdcd;
+}
+body .second .container {
+  width: 300px;
+  padding-left: 2em;
+  margin-top: 1em;
+}
+.navbar-inner .nav li.active a {
+  background: #F03F37;
+  box-shadow: none;
+  color: #fff;
+  padding: .25em 1em;
+  margin-top: .87em;
+  border-radius: 5px;
+}
+
+.center {
+  text-align: center;
+}
+span.brand.tagline {
+  font-size: 1.25em;
+}
+body .page-header {
+  background: #f0f0f0;
+  border-bottom: 2px solid #cdcdcd;
+  border-top: none;
+  margin: 0;
+  padding: 1em;
+}
+.page-header p {
+  max-width: 75%;
+  margin: 1em auto;
+}
+.page-header .btn-primary, .page-header .btn-primary:hover, .page-header .btn-primary:active, .page-header .btn-primary.active, .page-header .btn-primary.disabled, .page-header .btn-primary[disabled] {
+  background-image: none;
+  background-color: #F03F37;
+  box-shadow: none;
+}
+.row .offset25 {
+  margin-left: 15%;
+}
+
+.caption{
+  display: block;
+  margin-top: -2em;
+  margin-bottom: 1em;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1.25em;
+  position: relative;
+}
+.thumb {
+  background: #000;
+  line-height: 1.2em;
+}
+.thumb:hover {
+  text-decoration: none;
+}
+.thumb>img {
+  opacity: .75;
+  height: 100%;
+  width: 100%;
+  
+}
+.thumb:hover img {
+  opacity: 1;
+}
+.article p {
+  padding-left: 0;
+}
+#footer a {
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  padding: 17px 20px 17px;
+  font-size: 12px;
+}
