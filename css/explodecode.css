@@ -88,16 +88,12 @@ body .page-header {
 }
 .thumb {
   background: #000;
-  line-height: 1.2em;
 }
 .thumb:hover {
   text-decoration: none;
 }
 .thumb>img {
   opacity: .75;
-  height: 100%;
-  width: 100%;
-  
 }
 .thumb:hover img {
   opacity: 1;
