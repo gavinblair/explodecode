@@ -26,27 +26,10 @@
                         <div class="navbar-content">
                             <a href="#"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" class="hidden-phone" id="logo"></a>
                             <ul class="nav pull-right">
-                                <?php
-                                    $menu_name = 'header-menu';
-
-                                    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
-                                        $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
-
-                                        $menu_items = wp_get_nav_menu_items($menu->term_id);
-
-                                        $c = 0;
-                                        foreach ( (array) $menu_items as $key => $menu_item ) {
-                                            $c++;
-                                            $title = $menu_item->title;
-                                            $url = $menu_item->url;
-                                            if($c <= 3) {
-                                                $left_menu_list .= '<a href="' . $url . '">' . $title . '</a>';
-                                            } else {
-                                                $right_menu_list .= '<a href="' . $url . '">' . $title . '</a>';
-                                            }
-                                        }
-                                    }
-                                ?>
+                                <?php wp_nav_menu( array(
+                                    'container'       => '',
+                                    'items_wrap'      => '%3$s',
+                                ) ); ?> 
                             </ul>
                         </div>
                     </div>
