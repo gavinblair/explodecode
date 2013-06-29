@@ -6,13 +6,15 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title><?php wp_title( '|', true, 'right' ); ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css">
-        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap-responsive.css">
-        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/explodecode.min.css">
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/prod/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/prod/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/prod/css/divshot-canvas.min.css">
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/prod/css/divshot-util.min.css">
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/prod/css/main.min.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -24,7 +26,7 @@
                 <div class="navbar-inner">
                     <div class="container">
                         <div class="navbar-content">
-                            <a href="#"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" class="hidden-phone" id="logo"></a>
+                            <a href="<?php bloginfo('home'); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo.png" class="hidden-phone" id="logo"></a>
                             <ul class="nav pull-right">
                                 <?php wp_nav_menu( array(
                                     'container'       => '',

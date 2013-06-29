@@ -101,3 +101,10 @@ body .page-header {
 .article p {
   padding-left: 0;
 }
+
+.tab {
+  display: none;
+}
+.tab.current, .tab:target {
+  display: block;
+}

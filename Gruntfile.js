@@ -7,7 +7,7 @@ module.exports = function(grunt){
       		},
       		build: {
         		src: ['js/lib/*.js', 'js/*.js'],
-				dest: 'js/prod/script.min.js'
+				dest: 'prod/js/explodecode.min.js'
       		}
 		},
 		jshint: {
@@ -49,7 +49,7 @@ module.exports = function(grunt){
 				expand: true,
 				cwd: 'css/',
 				src: ['*.css', '!*.min.css'],
-				dest: 'css/',
+				dest: 'prod/css/',
 				ext: '.min.css'
 			}
 		},
