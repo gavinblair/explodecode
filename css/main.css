@@ -24,11 +24,17 @@ p.lead {
   background: #000;
   border-radius: 0;
 }
-.navbar-inner .brand, .navbar-inner .nav li a, .navbar-inner .nav li a:hover {
+.navbar-inner .brand, .navbar-inner .nav li a, .navbar-inner .nav li a:hover, #footer .nav a {
   color: #fff;
   text-shadow: none;
   font-weight: bold;
   font-size: .85em;
+}
+#footer a.pull-right {
+  color: hsl(0, 100%, 100%);
+  padding-top: 1em;
+  font-size: .8em;
+  font-weight: bold;
 }
 .second .navbar-inner .brand, .second .navbar-inner .nav li a, .second .navbar-inner .nav li a:hover {
   color: #000;
@@ -68,10 +74,11 @@ body .page-header {
   max-width: 75%;
   margin: 1em auto;
 }
-.page-header .btn-primary, .page-header .btn-primary:hover, .page-header .btn-primary:active, .page-header .btn-primary.active, .page-header .btn-primary.disabled, .page-header .btn-primary[disabled] {
+.page-header .btn-primary, .page-header .btn-primary:hover, .page-header .btn-primary:active, .page-header .btn-primary.active, .page-header .btn-primary.disabled, .page-header .btn-primary[disabled], .navbar .navbar-content .nav>.active>a:hover {
   background-image: none;
   background-color: #F03F37;
   box-shadow: none;
+  color: #fff;
 }
 .row .offset25 {
   margin-left: 15%;
@@ -104,6 +111,8 @@ body .page-header {
 
 .tab {
   display: none;
+  padding-top: 94px;
+  margin-top: -94px;
 }
 .tab.current, .tab:target {
   display: block;

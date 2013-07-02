@@ -1,9 +1,12 @@
 $(document).ready(function(){
-	if($(".tab:target").length){
-		tabactivate();
-	}
+	setTimeout(function(){
+		if($(".tab:target").length){
+			tabactivate();
+		}
+	}, 100);
 	$(".tabs a").click(function(){
-		tabactivate();
+		//async
+		setTimeout(function(){ tabactivate(); }, 0);
 	});
 });
 function tabactivate(){
