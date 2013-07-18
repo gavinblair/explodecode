@@ -70,7 +70,7 @@ Template Name: Home Template
           <div class="hidden-phone row">
         <?php } ?>
           <a href="#" class="thumb align-center <?php if($c==1 || ($c-2)%3){ ?>offset25 <?php } ?> span3">
-             <img src="http://i.imgur.com/9xIliL2.png">
+             <?php echo get_avatar( get_the_author_meta( 'ID' ), 420, 'http://i.imgur.com/9xIliL2.png', get_the_author_meta( 'user_nicename' ) ); ?>
              <br>
              <strong class="caption"><?php the_title(); ?></strong> 
           </a>
