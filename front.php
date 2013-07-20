@@ -28,7 +28,7 @@ Template Name: Home Template
                 </div>
             </div>
             <div class="page-header">
-              <div id="workshops" class='tab current'>
+              <div id="workshops" class='tab'>
                 <h1 class="center">Level Up</h1>
                 <p class="center" id="intro">In September 2013, we're running our first workshop on Phonegap. Learn
                   how to use your existing web development skills to build and deploy mobile
