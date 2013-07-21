@@ -5,9 +5,9 @@
                     <div class="row article">
                         <div class="span2 offset1">
                             <p>
-                                <img src="http://i.imgur.com/byDYh6P.png">
+                                <?php echo get_avatar( get_the_author_meta( 'ID' ), 420, 'http://i.imgur.com/9xIliL2.png', get_the_author_meta( 'user_nicename' ) ); ?>
                                 <br>
-                                <strong><?php the_author(); ?></strong>
+                                <strong><?php the_author_meta( 'user_nicename' ); ?></strong>
                                 <br>
                                 <small>
                                   <em>Explode Code</em> 
@@ -16,8 +16,11 @@
                         </div>
                         <div class="span8">
                             <h2><?php the_title(); ?></h2>
-                            <p class="lead"><?php the_excerpt(); ?></p>
+                            <?php if(get_the_excerpt() !== get_the_content()){ ?>
+                                <div class="lead"><?php the_excerpt(); ?></div>
+                            <?php } ?>
                             <?php the_content(); ?>
+                            <?php comments_template( '', true ); ?>
                         </div>
                     </div>
                 <?php endwhile; else: ?>

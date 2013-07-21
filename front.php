@@ -29,36 +29,29 @@ Template Name: Home Template
             </div>
             <div class="page-header">
               <div id="workshops" class='tab'>
-                <h1 class="center">Level Up</h1>
-                <p class="center" id="intro">In September 2013, we're running our first workshop on Phonegap. Learn
-                  how to use your existing web development skills to build and deploy mobile
-                  apps for multiple devices and stores. Get one-on-one time with local experts
-                  with office hours. &nbsp; &nbsp; &nbsp; &nbsp;
+                <h1 class="center"><?php echo get_option('workshops_title'); ?></h1>
+                <p class="center" id="intro"><?php echo get_option('workshops_description'); ?> &nbsp; &nbsp; &nbsp; &nbsp;
                   <br> &nbsp;
                   <br>
-                  <a class="btn btn-primary btn-large">Only $99 - Register Now</a>
+                  <a href='workshops#register' class="btn btn-primary btn-large"><?php echo get_option('workshops_action'); ?></a>
                    <br /> <br /><a href="workshops">Learn More</a>
                 </p>
               </div>
               <div id="talks" class='tab'>
-                <h1 class="center">A Community of Developers</h1>
-                <p class="center" id="intro">Talks features two or three local developers as they show off some of their code and tell the story behind it.
-                Hosted at Big Viking Games, Talks is an opportunity to meet and learn from developers in the community. &nbsp; &nbsp; &nbsp; &nbsp;
+                <h1 class="center"><?php echo get_option('talks_title'); ?></h1>
+                <p class="center" id="intro"><?php echo get_option('talks_description'); ?> &nbsp; &nbsp; &nbsp; &nbsp;
                   <br> &nbsp;
                   <br>
-                  <a class="btn btn-primary btn-large">Free event: September 12 - Register Now</a> 
+                  <a href='talks#register' class="btn btn-primary btn-large"><?php echo get_option('talks_action'); ?></a> 
                   <br /> <br /><a href="talks">Learn More</a>
                 </p>
               </div>
               <div id="helloworld" class='tab'>
-                <h1 class="center">Learn Something New</h1>
-                <p class="center" id="intro">Hello, World! is an opportunity to learn something new. 
-                  Pick a programming language or framework that you don't know and build something with it - anything!
-                  Then, bring your work to this event, show it off like it's the next Facebook, and eat pizza!
-                  This is an open event and everyone is invited to participate. &nbsp; &nbsp; &nbsp; &nbsp;
+                <h1 class="center"><?php echo get_option('helloworld_title'); ?></h1>
+                <p class="center" id="intro"><?php echo get_option('helloworld_description'); ?> &nbsp; &nbsp; &nbsp; &nbsp;
                   <br> &nbsp;
                   <br>
-                  <a class="btn btn-primary disabled btn-large">Next event: November 2013 - Registration opening soon</a> 
+                  <a href='hello-world#register' class="btn btn-primary btn-large"><?php echo get_option('helloworld_action'); ?></a> 
                   <br /> <br /><a href="hello-world">Learn More</a>
                 </p>
               </div>
@@ -69,7 +62,7 @@ Template Name: Home Template
         <?php if($c%3 || $c==0){?>
           <div class="hidden-phone row">
         <?php } ?>
-          <a href="#" class="thumb align-center <?php if($c==1 || ($c-2)%3){ ?>offset25 <?php } ?> span3">
+          <a href="<?php the_permalink(); ?>" class="thumb align-center <?php if($c==1 || ($c-2)%3){ ?>offset25 <?php } ?> span3">
              <?php echo get_avatar( get_the_author_meta( 'ID' ), 420, 'http://i.imgur.com/9xIliL2.png', get_the_author_meta( 'user_nicename' ) ); ?>
              <br>
              <strong class="caption"><?php the_title(); ?></strong> 
