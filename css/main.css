@@ -7,6 +7,14 @@ body {
 p{
   padding: 1em;
 }
+.article .lead {
+  margin-bottom: 0;
+}
+.article .lead p {
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  padding-top: .5em;
+}
 p.lead {
   margin-bottom: 0;
 }
@@ -44,11 +52,12 @@ p.lead {
   border-top: 2px solid #cdcdcd;
   position: relative;
   z-index: 3;
+  box-shadow: none;
 }
 body .second .container {
   width: 300px;
   padding-left: 2em;
-  margin-top: 1em;
+  margin-top: 0;
 }
 .navbar-inner .nav li.active a {
   background: #F03F37;
@@ -115,10 +124,16 @@ body .page-header {
 
 .tab {
   display: none;
-  padding-top: 94px;
-  margin-top: -94px;
+  padding-top: 76px;
+  margin-top: -76px;
   position: absolute;
 }
 .tab:target {
   display: block;
 } 
+img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+}

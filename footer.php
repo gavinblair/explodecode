@@ -2,8 +2,8 @@
             <br>
             <div class="navbar" id="footer">
                 <div class="navbar-inner">
-                    <a class="brand" href="#">Copysomething 2013</a>
-                    <a class="pull-right" href="#">Terms of Endearment</a> 
+                    <a class="brand" href="legalese">Copysomething 2013</a>
+                    <a class="pull-right" href="legalese">Terms of Endearment</a> 
                 </div>
             </div>
         </div>
