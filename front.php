@@ -58,20 +58,20 @@ Template Name: Home Template
             </div>
       <p class="center"><?php the_title(); ?></p>
       <?php query_posts(array('post_type' => 'post')); ?>
-      <?php $c=-1; if ( have_posts() ) : while ( have_posts() ) : the_post(); $c++; ?>
-        <?php if($c%3 || $c==0){?>
+      <?php $c=0; if ( have_posts() ) : while ( have_posts() ) : the_post(); $c++; ?>
+        <?php if(($c-1)%3 === 0){?>
           <div class="hidden-phone row">
         <?php } ?>
-          <a href="<?php the_permalink(); ?>" class="thumb align-center <?php if($c==1 || ($c-2)%3){ ?>offset25 <?php } ?> span3">
+          <a href="<?php the_permalink(); ?>" class="thumb align-center <?php if(($c-1)%3 === 0){ ?>offset25 <?php } ?> span3">
              <?php echo get_avatar( get_the_author_meta( 'ID' ), 420, 'http://i.imgur.com/9xIliL2.png', get_the_author_meta( 'user_nicename' ) ); ?>
              <br>
-             <strong class="caption"><?php the_title(); ?></strong> 
+             <strong class="caption"><?php echo the_title(); ?></strong> 
           </a>
-        <?php if(($c-1)%3 && $c>3){?>
+        <?php if($c%3 === 0){?>
           </div><br />
         <?php } ?>
     <?php endwhile; endif; ?>
-    <?php if(($c-1)%3 || $c<=3){ ?>
+    <?php if($c%3){ ?>
       </div><br />
     <?php } ?>
 <?php get_footer(); ?>
