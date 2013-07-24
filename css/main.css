@@ -145,3 +145,22 @@ img {
 .topimg>img {
   min-width: 100%;
 }
+.landing {
+  text-align: center;
+}
+.landing p {
+  margin-bottom: 0;
+  padding: 1em 2em 0 2em;
+}
+.landing form {
+  margin-top: 1em;
+}
+.landing h2 {
+  margin-bottom: 1em;
+}
+.landing form.sent>p { display: none;}
+.landing .wpcf7-mail-sent-ok {
+
+  border: none;
+  font-style: italic;
+}

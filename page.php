@@ -18,7 +18,6 @@
                         <div class="span8 offset2">
                             <h2><?php the_title(); ?></h2>
                             <?php the_content(); ?>
-                            <?php comments_template( '', true ); ?>
                         </div>
                     </div>
                 <?php endwhile; else: ?>
