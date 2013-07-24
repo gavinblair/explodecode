@@ -7,13 +7,13 @@
                 </div>
             </div>
         </div>
-        <!--
         <script src="<?php bloginfo('template_url'); ?>/prod/js/explodecode.min.js"></script>
-        -->
+        <!--
         <script src="<?php bloginfo('template_url'); ?>/js/_jquery.min.js"></script>
         <script src="<?php bloginfo('template_url'); ?>/js/bootstrap.js"></script>
         <script src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
         <script src="<?php bloginfo('template_url'); ?>/js/cookie.js"></script>
+        -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

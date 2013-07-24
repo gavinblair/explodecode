@@ -15,9 +15,9 @@
         <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/prod/css/divshot-canvas.min.css">
         <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/prod/css/divshot-util.min.css">
         <!--
-        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/prod/css/main.min.css">
-        -->
         <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main.css">
+        -->
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/prod/css/main.min.css">
         <?php wp_head(); ?>
     </head>
     <body>
