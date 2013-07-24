@@ -1,9 +1,9 @@
 <?php get_header(); ?>
             <?php 
-                $img = '<img src="http://i.imgur.com/IyyXt6d.png" />';
+                $img = '<img src="'.get_bloginfo('template_url').'/img/header.jpg" />';
                 $attachments = get_children( array('post_parent' => get_the_ID(), 'post_type' => 'attachment', 'post_mime_type' => 'image') );
                 foreach ( $attachments as $attachment_id => $attachment ) {
-                    $Img = wp_get_attachment_image($attachment_id, array(1170, 1170));
+                    $img = wp_get_attachment_image($attachment_id, array(1170, 1170));
                     break;
                 }
             ?>

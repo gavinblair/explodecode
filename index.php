@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-            <img src="http://i.imgur.com/IyyXt6d.png">
+            <img src="<?php bloginfo('template_url'); ?>/img/header.jpg">
             <div class="container"><br />
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <div class="row article">
