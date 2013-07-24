@@ -1,5 +1,17 @@
 <?php get_header(); ?>
-            <img src="http://i.imgur.com/IyyXt6d.png">
+            <?php 
+                $img = '<img src="http://i.imgur.com/IyyXt6d.png" />';
+                $attachments = get_children( array('post_parent' => get_the_ID(), 'post_type' => 'attachment', 'post_mime_type' => 'image') );
+                foreach ( $attachments as $attachment_id => $attachment ) {
+                    $Img = wp_get_attachment_image($attachment_id, array(1170, 1170));
+                    break;
+                }
+            ?>
+            <?php if($img){ ?>
+            <div class="topimg">
+                <?php echo $img; ?>
+            </div>
+            <?php } ?>
             <div class="container"><br />
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <div class="row article">
@@ -15,9 +27,14 @@
                             </p>
                         </div>
                         <div class="span8">
-                            <h2><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></h2>
+                            <h2><?php the_title(); ?></h2>
                             <small><?php echo the_date(); ?></small>
-                            <div class="lead"><?php the_excerpt(); ?></div>
+                            <?php if(get_the_excerpt() !== get_the_content()){ ?>
+                                <div class="lead"><?php the_excerpt(); ?></div>
+                            <?php } ?>
+                            <?php the_content(); ?>
+                            <br />
+                            <?php comments_template( '', true ); ?>
                         </div>
                     </div>
                 <?php endwhile; else: ?>
@@ -25,4 +42,3 @@
                 <?php endif; ?>
             </div>
 <?php get_footer(); ?>
-            

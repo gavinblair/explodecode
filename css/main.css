@@ -137,3 +137,11 @@ img {
   -moz-filter: grayscale(100%);
   filter: grayscale(100%);
 }
+.topimg {
+  height: 273px;
+  width: 100%;
+  overflow: hidden;
+}
+.topimg>img {
+  min-width: 100%;
+}
